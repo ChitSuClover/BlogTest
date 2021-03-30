@@ -1,0 +1,9 @@
+<h3>Confirm Box</h3>
+<%= form_with(model: @blog, url: blogs_path, local: true) do |form| %>
+  <%= form.hidden_field :name %>
+  <%= form.hidden_field :content %>
+  <p>Name:<%= @blog.name %></p>
+  <p>Content:<%= @blog.content %></p>
+  <%= form.submit  "Send" %>
+  <%= form.submit "Back", name: "back" %>
+<% end %>
